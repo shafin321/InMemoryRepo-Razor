@@ -1,0 +1,26 @@
+﻿@page
+@model RazorResturent.Pages.Resturent.DetailModel
+@{
+}
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>CuineType</th>
+            <th>Location </th>
+
+        </tr>
+    </thead>
+    <tbody>
+      
+        
+            <tr>
+                <td>@Model.Resturant.Name</td>
+                <td>@Model.Resturant.Cuisine</td>
+                <td>@Model.Resturant.Location</td>
+            </tr>
+        
+
+    </tbody>
+</table>

@@ -1,0 +1,49 @@
+﻿@page 
+@model RazorResturent.Pages.Resturent.ListModel
+@{
+}
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchTearm" />
+            <div class="input-group-append">
+                <button class="btn btn-dark">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>CuineType</th>
+            <th>Location </th>
+            <th>    </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Resturants)
+        {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Cuisine</td>
+            <td>@item.Location</td>
+
+            <td>
+                <a class="btn btn-primary" asp-page="./Detail" asp-route-id="@item.Id">Detail</a>
+            </td>
+
+            
+
+
+
+        </tr>
+        }
+
+    </tbody>
+</table>
